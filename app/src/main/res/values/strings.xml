@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">SAIN_BSE_8A</string>
     <string name="heading">South African ID</string>
+    <string name="btn_submit_text">Submit</string>
 </resources>

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:onClick="btnClearClicked"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -18,44 +19,42 @@
         android:textSize="@dimen/text_size" />
 
     <EditText
+        android:id="@+id/etCnic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter the CNIC"
-        android:textSize="18sp"
-        android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
-        android:id="@+id/etCnic"
-        />
+        android:hint="Enter the CNIC"
+        android:inputType="number"
+        android:textSize="18sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
         android:layout_marginTop="50dp"
-        >
-        <Button
-            android:layout_width="@dimen/btn_width"
-            android:layout_height="wrap_content"
-            android:text="Clear"
-            android:layout_marginEnd="20dp"
-            android:id="@+id/btnClear"
-            />
+        android:gravity="center"
+        android:orientation="horizontal">
 
         <Button
+            android:id="@+id/btnClear"
             android:layout_width="@dimen/btn_width"
             android:layout_height="wrap_content"
-            android:text="Submit"
+            android:layout_marginEnd="20dp"
+            android:onClick="btnClearClicked"
+            android:text="Clear" />
+
+        <Button
             android:id="@+id/btnSubmit"
-            />
+            android:layout_width="@dimen/btn_width"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_submit_text" />
 
     </LinearLayout>
 
     <TextView
+        android:id="@+id/tvResult"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="Result will be shown here"
-        />
+        android:gravity="center" />
 </LinearLayout>
